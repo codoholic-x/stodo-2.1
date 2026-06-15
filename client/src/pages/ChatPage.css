@@ -1,0 +1,78 @@
+.chat-container {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  padding: 10px;
+}
+
+.chat-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.chat-header img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.chat-box {
+  flex: 1;
+  overflow-y: auto;
+  margin-top: 20px;
+  padding: 10px;
+  background: #f9f9f9;
+}
+
+.chat-bubble {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  max-width: 60%;
+}
+
+.buyer {
+  background-color: #d4f7dc;
+  align-self: flex-end;
+}
+
+.seller {
+  background-color: #ffe0b3;
+  align-self: flex-start;
+}
+
+.chat-input {
+  display: flex;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 8px;
+}
+
+.chat-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.fix-btn {
+  background: green;
+  color: white;
+  padding: 10px;
+  border: none;
+}
+
+.delete-btn {
+  background: red;
+  color: white;
+  padding: 10px;
+  border: none;
+}

@@ -1,0 +1,82 @@
+/* client/src/styles/Login.css */
+
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #83a4d4, #b6fbff);
+}
+
+.login-box {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s;
+}
+
+.login-box:hover {
+  transform: scale(1.01);
+}
+
+.login-box h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border 0.2s;
+}
+
+.login-box input:focus {
+  border-color: #0077cc;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 12px;
+  background-color: #0077cc;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+.login-box button:hover {
+  background-color: #005fa3;
+}
+
+.login-links {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.login-links a {
+  margin-top: 5px;
+  color: #0077cc;
+  transition: color 0.3s;
+}
+
+.login-links a:hover {
+  color: #004d80;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 10px;
+  text-align: center;
+}

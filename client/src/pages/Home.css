@@ -1,0 +1,152 @@
+/* GLOBAL RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* 🔥 Scroll completely removed */
+  font-family: Arial, sans-serif;
+}
+
+/* MAIN CONTAINER */
+.home-container {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 60px;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+}
+
+/* Decorative Animated Circles (Scroll Safe) */
+.home-container::before {
+  content: "";
+  width: 420px;
+  height: 420px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  position: absolute;
+  top: -40px;   /* 🔥 FIX: Circles now stay inside screen */
+  left: -60px;
+  animation: float 6s infinite ease-in-out;
+}
+
+.home-container::after {
+  content: "";
+  width: 260px;
+  height: 260px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  position: absolute;
+  bottom: -30px;  /* 🔥 FIX */
+  right: -40px;
+  animation: float 9s infinite ease-in-out;
+}
+
+@keyframes float {
+  0% { transform: translateY(-15px); }
+  50% { transform: translateY(20px); }
+  100% { transform: translateY(-15px); }
+}
+
+/* LEFT CONTENT */
+.home-content {
+  max-width: 600px;
+  z-index: 2;
+}
+
+.home-title {
+  font-size: 60px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.home-title span {
+  color: #ffd700;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+}
+
+.home-subtitle {
+  font-size: 20px;
+  margin-top: 10px;
+  max-width: 500px;
+  opacity: 0.9;
+}
+
+/* MAIN BUTTON */
+.home-btn {
+  margin-top: 30px;
+  padding: 12px 28px;
+  background: #ffd700;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.home-btn:hover {
+  background: #ffffff;
+  transform: scale(1.08);
+}
+
+/* LOGIN BUTTON FIXED TOP RIGHT */
+.home-login-btn-container {
+  position: absolute;
+  top: 25px;     /* 🔥 Adjusted properly */
+  right: 30px;   /* 🔥 Always visible */
+  z-index: 2000;
+}
+
+.home-login-btn {
+  padding: 10px 22px;
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.home-login-btn:hover {
+  background: #fff;
+  color: #000;
+  transform: scale(1.05);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  html, body {
+    overflow-y: auto; /* 🔥 Mobile me scroll allow */
+  }
+
+  .home-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .home-title {
+    font-size: 45px;
+  }
+
+  .home-subtitle {
+    font-size: 18px;
+  }
+
+  .home-login-btn-container {
+    top: 20px;
+    right: 20px;
+  }
+}

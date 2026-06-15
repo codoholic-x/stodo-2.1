@@ -1,0 +1,92 @@
+.profile-container {
+  padding: 20px;
+  max-width: 500px;
+  margin: auto;
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-info h3 {
+  margin: 0;
+}
+
+.profile-image img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.profile-stats div {
+  margin-top: 15px;
+  padding: 10px;
+  background: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.profile-stats div:hover {
+  background-color: #e3f2fd;
+}
+
+.product-card {
+  background: #fff;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 10px;
+  position: relative;
+}
+
+.popup-confirm {
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+}
+
+.terms-container {
+  max-width: 700px;
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.terms-container h1 {
+  color: #333;
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+.terms-container p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.back-btn {
+  margin-bottom: 20px;
+  padding: 8px 16px;
+  background: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.back-btn:hover {
+  background-color: #1565c0;
+}

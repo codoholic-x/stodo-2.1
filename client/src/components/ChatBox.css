@@ -1,0 +1,36 @@
+.chat-box {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  background-color: #f9f9f9;
+}
+
+.chat-message {
+  margin-bottom: 12px;
+  max-width: 60%;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.buyer-msg {
+  background-color: #d4f9d4;
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+.seller-msg {
+  background-color: #ffe0b3;
+  align-self: flex-start;
+  margin-right: auto;
+}
+
+.msg-username {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.msg-text {
+  margin: 0;
+}

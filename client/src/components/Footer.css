@@ -1,0 +1,36 @@
+.footer {
+  background-color: #1a1a2e;
+  color: white;
+  padding: 12px 20px;
+  text-align: center;
+  position: relative;
+  margin-top: 40px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 900px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.footer-left {
+  font-size: 0.9rem;
+}
+
+.contact-btn {
+  background-color: #00bcd4;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-btn:hover {
+  background-color: #0099aa;
+}

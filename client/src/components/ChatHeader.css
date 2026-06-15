@@ -1,0 +1,18 @@
+.chat-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.chat-header-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.chat-header-name {
+  font-weight: 600;
+  font-size: 1.1rem;
+}

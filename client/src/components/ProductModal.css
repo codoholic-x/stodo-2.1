@@ -1,0 +1,69 @@
+/* 🔲 Overlay Background */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* 📦 Modal Box */
+.modal-box {
+  background-color: white;
+  padding: 25px;
+  border-radius: 12px;
+  max-width: 480px;
+  width: 90%;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  animation: zoomIn 0.3s ease;
+}
+
+/* ❌ Close Button */
+.modal-close {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+/* 🖼️ Image */
+.modal-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* 📃 Content */
+.modal-content h2 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.modal-content p {
+  margin: 5px 0;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* ✨ Animation */
+@keyframes zoomIn {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
