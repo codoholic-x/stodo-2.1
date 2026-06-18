@@ -10,7 +10,7 @@ const ProductModal = ({ product, onClose }) => {
         <button className="modal-close" onClick={onClose}>✖</button>
 
         <img
-          src={`http://localhost:5000/uploads/${product.imageUrl}`}
+          src={`${import.meta.env.VITE_API_URL}/uploads/${product.imageUrl}`}
           alt={product.itemName}
           className="modal-image"
         />

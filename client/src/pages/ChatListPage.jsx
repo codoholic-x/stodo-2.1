@@ -19,7 +19,7 @@ const ChatListPage = () => {
 
     const fetchChats = async () => {
       try {
-        const res = await fetch(`http://localhost:5000/api/chat/user/${user._id}`, {
+        const res = await fetch(`${import.meta.env.VITE_API_URL}/api/chat/user/${user._id}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

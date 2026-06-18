@@ -1,7 +1,7 @@
-// socket.js
-import { io } from 'socket.io-client';
+import { io } from "socket.io-client";
+
 
 // Connect to backend socket server
-const socket = io('http://localhost:5000/api/auth/login'); // Same port as your backend
+const socket = io(import.meta.env.VITE_API_URL);
 
 export default socket;

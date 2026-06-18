@@ -20,8 +20,8 @@ const DeletedProductsPage = () => {
     const fetchProducts = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:5000/api/profile/my-products/${userId}`
-        );
+  `${import.meta.env.VITE_API_URL}/api/profile/my-products/${userId}`
+);
         setProducts(res.data.products);
       } catch (err) {
         console.error("❌ Failed to fetch products", err);
@@ -34,7 +34,9 @@ const DeletedProductsPage = () => {
   // ✅ Seller deletes product
   const handleDelete = async (productId) => {
     try {
-      await axios.delete(`http://localhost:5000/api/profile/delete/${productId}`);
+      await axios.delete(
+  `${import.meta.env.VITE_API_URL}/api/profile/delete/${productId}`
+);
 
       // Frontend se remove karo
       setProducts(prev => prev.filter(p => p._id !== productId));
@@ -60,7 +62,7 @@ const DeletedProductsPage = () => {
             
             {/* 🖼️ Image */}
             <img
-              src={`http://localhost:5000/${product.image}`}
+              src={`${import.meta.env.VITE_API_URL}/${product.image}`}
               alt={product.itemName}
               className="delete-product-img"
             />

@@ -30,7 +30,8 @@ const ProductCard = ({ product, onImageClick, currentUserId }) => {
     }
 
     try {
-      const res = await fetch('http://localhost:5000/api/chat/initiate', {
+     const res = await fetch(
+  'https://stodo-backend.onrender.com/api/chat/initiate', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -59,7 +60,7 @@ const ProductCard = ({ product, onImageClick, currentUserId }) => {
     <>
       <div className="product-card">
         <img
-          src={`http://localhost:5000/uploads/${product.imageUrl}`}
+          src={`${import.meta.env.VITE_API_URL}/uploads/${product.imageUrl}`}
           alt={product.itemName}
           className="product-image"
           onClick={onImageClick}

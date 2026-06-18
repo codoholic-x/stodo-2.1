@@ -22,7 +22,10 @@ const ChatList = ({ chats, currentUserId }) => {
       ) : (
         chats.map((chat, index) => (
           <div className="chat-user" key={index} onClick={() => openChat(chat)}>
-            <img src={`http://localhost:5000/uploads/${chat.otherUser.profilePic}`} alt="user" />
+            <img
+  src={`${import.meta.env.VITE_API_URL}/uploads/${chat.otherUser.profilePic}`}
+  alt="user"
+/>
             <div className="chat-info">
               <strong>{chat.otherUser.username}</strong>
               <p>{chat.lastMessage ? chat.lastMessage.slice(0, 25) + '...' : 'No messages yet'}</p>

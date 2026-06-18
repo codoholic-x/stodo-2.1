@@ -28,7 +28,8 @@ const ChatPage = () => {
   useEffect(() => {
     const fetchChat = async () => {
       try {
-        const res = await fetch(`http://localhost:5000/api/chat/${chatId}`, {
+        const res = await fetch(
+  `${import.meta.env.VITE_API_URL}/api/chat/${chatId}`, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
           },
@@ -99,7 +100,8 @@ const ChatPage = () => {
   const user = JSON.parse(localStorage.getItem('user'));
 
   try {
-    const res = await fetch(`http://localhost:5000/api/chat/fix/${chatId}`, {
+    const res = await fetch(
+  `${import.meta.env.VITE_API_URL}/api/chat/fix/${chatId}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -127,7 +129,8 @@ const ChatPage = () => {
 
   const handleDeleteChat = async () => {
   try {
-    await axios.delete(`http://localhost:5000/api/chat/${chatId}`);
+    await axios.delete(
+  `${import.meta.env.VITE_API_URL}/api/chat/${chatId}`);
     alert('Chat deleted successfully');
     navigate('/main-page', { state: { deletedChatId: chatId } }); // go back with info
   } catch (error) {
@@ -142,7 +145,7 @@ const ChatPage = () => {
       {chatInfo && (
         <div className="chat-header">
           <img
-            src={`http://localhost:5000/uploads/${chatInfo.otherUser.profilePic}`}
+            src={`${import.meta.env.VITE_API_URL}/uploads/${chatInfo.otherUser.profilePic}`}
             alt="User"
           />
           <h3>{chatInfo.otherUser.username}</h3>

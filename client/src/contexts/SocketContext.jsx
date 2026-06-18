@@ -8,9 +8,12 @@ const SocketContext = createContext();
 export const SocketProvider = ({ children }) => {
   const [socket, setSocket] = useState(null);
 
-  useEffect(() => {
-    const newSocket = io('http://localhost:5000'); // 👈 server port 5000
-    setSocket(newSocket);
+ useEffect(() => {
+  const newSocket = io(
+    import.meta.env.VITE_API_URL
+  );
+
+  setSocket(newSocket);
 
     newSocket.on('connect', () => {
       console.log('🟢 Connected to socket:', newSocket.id);

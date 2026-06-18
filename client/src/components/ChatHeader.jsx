@@ -6,7 +6,7 @@ const ChatHeader = ({ user }) => {
   return (
     <div className="chat-header">
       <img
-        src={`http://localhost:5000/uploads/${user?.profilePic}`}
+        src={`${import.meta.env.VITE_API_URL}/uploads/${user?.profilePic}`}
         alt="Profile"
         className="chat-header-img"
       />

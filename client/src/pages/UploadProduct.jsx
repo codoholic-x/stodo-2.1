@@ -88,7 +88,8 @@ const UploadProduct = () => {
   data.append('seller', user._id); // ✅
 
     try {
-      const res = await fetch('http://localhost:5000/api/products/upload', {
+      const res = await fetch(
+  `${import.meta.env.VITE_API_URL}/api/products/upload`, {
         method: 'POST',
         headers: {
           'x-user-id': user._id, // ✅ very important

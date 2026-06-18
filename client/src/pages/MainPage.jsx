@@ -50,7 +50,8 @@ const MainPage = () => {
 
   const fetchNearbyProducts = async (loc) => {
     try {
-      const res = await fetch('http://localhost:5000/api/products/nearby', {
+      const res = await fetch(
+  `${import.meta.env.VITE_API_URL}/api/products/nearby`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ userLocation: loc }),
@@ -78,7 +79,8 @@ const MainPage = () => {
     }
 
     try {
-      const res = await fetch(`http://localhost:5000/api/chat/user/${userId}`, {
+      const res = await fetch(
+  `${import.meta.env.VITE_API_URL}/api/chat/user/${userId}`, {
         headers: {
           Authorization: `Bearer ${token}`,
           'Content-Type': 'application/json'
