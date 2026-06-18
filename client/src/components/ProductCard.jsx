@@ -31,7 +31,7 @@ const ProductCard = ({ product, onImageClick, currentUserId }) => {
 
     try {
      const res = await fetch(
-  'https://stodo-backend.onrender.com/api/chat/initiate', {
+  'https://stodo-2-1.onrender.com/api/chat/initiate', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
